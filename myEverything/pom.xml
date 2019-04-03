@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>my.job</groupId>
+    <artifactId>myEverything</artifactId>
+    <version>1.0.0</version>
+        <!---->
+    <packaging>jar</packaging>
+    <name>myEverything</name>
+
+    <description>
+        <!--描述项目-->
+        这是第一版的搜索实现
+    </description>
+
+    <!--开发者信息-->
+    <developers>
+        <developer>
+            <id>01</id>
+            <name>SJ</name>
+            <email>18840351578@163.com</email>
+            <roles>
+                <role>Creator</role>
+                <role>Developer</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <!--属性信息-->
+    <properties>
+        <encoding>UTF-8</encoding>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+
+
+
+    </properties>
+
+    <dependencies>
+
+
+    </dependencies>
+
+    <!--程序构建信息-->
+    <build>
+        <!--maven的功能通过插件完成
+        插件有多个
+        有多个目标，执行目标需要绑定生命周期的某个阶段
+        插件的使用文档-->
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <id>copy-lib</id>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <phase>package</phase>
+
+                        <configuration>
+                            <outputDirectory>${project.build.directory}</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+                <version>3.1.1</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>myEverything.com.EverythingG2ComApplication.java</mainClass>
+                            <classpathPrefix>lib</classpathPrefix>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+
+        </plugins>
+
+    </build>
+
+
+
+</project>

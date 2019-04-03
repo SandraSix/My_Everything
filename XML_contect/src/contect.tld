@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<contact-list>
+   <concat id="001">
+       <name>张三</name>
+       <gender>男</gender>
+       <phone>1525311252</phone>
+       <email>115289@qq.com</email>
+   </concat>
+
+    <concat id="002">
+        <name>李四</name>
+        <gender>男</gender>
+        <phone>1525311252</phone>
+        <email>115289@qq.com</email>
+    </concat>
+
+    <concat id="003">
+        <name>王五</name>
+        <gender>男</gender>
+        <phone>1525311252</phone>
+        <email>115289@qq.com</email>
+    </concat>
+</contact-list>
