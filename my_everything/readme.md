@@ -24,6 +24,6 @@ JDBC
 
 Lombok库（IDEA安装Lombok插件） 
 
-Java多线程 
+Java的多线程 
 
 文件系统监控（Apache Commons IO）
